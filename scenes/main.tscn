@@ -39,7 +39,7 @@ mouse_filter = 2
 layout_mode = 0
 offset_left = 16.0
 offset_top = 12.0
-offset_right = 336.0
+offset_right = 220.0
 offset_bottom = 40.0
 text = "SCORE  0"
 
@@ -47,14 +47,15 @@ text = "SCORE  0"
 layout_mode = 0
 offset_left = 16.0
 offset_top = 40.0
-offset_right = 256.0
+offset_right = 200.0
 offset_bottom = 68.0
+text = "            "
 
 [node name="Lives" type="Label" parent="HUD/Root" unique_id=1331845048]
 layout_mode = 0
 offset_left = 780.0
 offset_top = 12.0
-offset_right = 940.0
+offset_right = 944.0
 offset_bottom = 40.0
 text = "HULL  + + +"
 
@@ -62,7 +63,7 @@ text = "HULL  + + +"
 layout_mode = 0
 offset_left = 16.0
 offset_top = 508.0
-offset_right = 720.0
+offset_right = 560.0
 offset_bottom = 536.0
 text = "WASD move"
 
