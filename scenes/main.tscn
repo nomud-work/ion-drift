@@ -6,27 +6,27 @@
 [ext_resource type="Script" path="res://scripts/hud.gd" id="4_0pobv"]
 [ext_resource type="Script" path="res://scripts/autopilot.gd" id="5_nh008"]
 
-[node name="Main" type="Node2D" unique_id=603348986]
+[node name="Main" type="Node2D" unique_id=332268269]
 script = ExtResource("1_ujkq1")
 
-[node name="World" type="Node2D" parent="." unique_id=457861639]
+[node name="World" type="Node2D" parent="." unique_id=655728906]
 
-[node name="Stars" type="Node2D" parent="World" unique_id=714506897]
+[node name="Stars" type="Node2D" parent="World" unique_id=2075538070]
 script = ExtResource("2_nwx4q")
 
-[node name="Player" type="Node2D" parent="World" unique_id=353111655]
+[node name="Player" type="Node2D" parent="World" unique_id=2087747508]
 script = ExtResource("3_t1gm4")
 
-[node name="Ions" type="Node2D" parent="World" unique_id=2104973160]
+[node name="Ions" type="Node2D" parent="World" unique_id=805271271]
 
-[node name="Debris" type="Node2D" parent="World" unique_id=469926487]
+[node name="Debris" type="Node2D" parent="World" unique_id=980710441]
 
-[node name="Fx" type="Node2D" parent="World" unique_id=1698102743]
+[node name="Fx" type="Node2D" parent="World" unique_id=1207089359]
 
-[node name="HUD" type="CanvasLayer" parent="." unique_id=1546317500]
+[node name="HUD" type="CanvasLayer" parent="." unique_id=637064624]
 script = ExtResource("4_0pobv")
 
-[node name="Root" type="Control" parent="HUD" unique_id=937051167]
+[node name="Root" type="Control" parent="HUD" unique_id=432714642]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -35,39 +35,63 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="Score" type="Label" parent="HUD/Root" unique_id=1972986823]
+[node name="ScorePanel" type="Panel" parent="HUD/Root" unique_id=1483219360]
 layout_mode = 0
-offset_left = 16.0
-offset_top = 12.0
-offset_right = 220.0
-offset_bottom = 40.0
-text = "SCORE  0"
+offset_left = 12.0
+offset_top = 8.0
+offset_right = 268.0
+offset_bottom = 72.0
+mouse_filter = 2
 
-[node name="Combo" type="Label" parent="HUD/Root" unique_id=440911162]
+[node name="Score" type="Label" parent="HUD/Root/ScorePanel" unique_id=922055358]
 layout_mode = 0
-offset_left = 16.0
-offset_top = 40.0
-offset_right = 200.0
-offset_bottom = 68.0
+offset_left = 10.0
+offset_top = 6.0
+offset_right = 246.0
+offset_bottom = 32.0
+text = "SCORE  0     "
+
+[node name="Combo" type="Label" parent="HUD/Root/ScorePanel" unique_id=1727524606]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 34.0
+offset_right = 246.0
+offset_bottom = 58.0
 text = "            "
 
-[node name="Lives" type="Label" parent="HUD/Root" unique_id=1331845048]
+[node name="HullPanel" type="Panel" parent="HUD/Root" unique_id=1846378831]
 layout_mode = 0
-offset_left = 780.0
-offset_top = 12.0
-offset_right = 944.0
+offset_left = 792.0
+offset_top = 8.0
+offset_right = 948.0
 offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="Lives" type="Label" parent="HUD/Root/HullPanel" unique_id=1094678011]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 4.0
+offset_right = 146.0
+offset_bottom = 28.0
 text = "HULL  + + +"
 
-[node name="Hint" type="Label" parent="HUD/Root" unique_id=1490126483]
+[node name="HintPanel" type="Panel" parent="HUD/Root" unique_id=591497984]
 layout_mode = 0
-offset_left = 16.0
-offset_top = 508.0
-offset_right = 560.0
-offset_bottom = 536.0
+offset_left = 12.0
+offset_top = 504.0
+offset_right = 520.0
+offset_bottom = 532.0
+mouse_filter = 2
+
+[node name="Hint" type="Label" parent="HUD/Root/HintPanel" unique_id=527244337]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 4.0
+offset_right = 500.0
+offset_bottom = 26.0
 text = "WASD move"
 
-[node name="Over" type="Label" parent="HUD/Root" unique_id=1620228361]
+[node name="Over" type="Label" parent="HUD/Root" unique_id=1793390121]
 visible = false
 custom_minimum_size = Vector2(480, 140)
 layout_mode = 0
@@ -77,5 +101,5 @@ offset_right = 720.0
 offset_bottom = 340.0
 horizontal_alignment = 1
 
-[node name="AutoPilot" type="Node" parent="." unique_id=1847362748]
+[node name="AutoPilot" type="Node" parent="." unique_id=971027088]
 script = ExtResource("5_nh008")
